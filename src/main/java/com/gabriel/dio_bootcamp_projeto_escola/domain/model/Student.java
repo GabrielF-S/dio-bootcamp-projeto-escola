@@ -10,8 +10,8 @@ import java.util.HashMap;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "tb_aluno")
-public class Studant {
+@Table(name = "tb_studant")
+public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -19,9 +19,7 @@ public class Studant {
     private String email;
     private HashMap<String, Double> scores;
 
-
-    public void setNotas(String disciplina,  Double scores) {
-        this.scores.put(disciplina, scores);
-
+    public void setScores(String course, Double score) {
+        this.scores.put(course, score);
     }
 }
