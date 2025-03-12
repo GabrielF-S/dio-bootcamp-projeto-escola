@@ -17,7 +17,12 @@ public class School {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(nullable = false)
-    private String nameCourse;
-    @OneToMany(fetch = FetchType.EAGER)
+    private String schoolName;
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Course> courses;
+
+    public void addCourse(Course course){
+        this.courses.add(course);
+    }
+
 }
