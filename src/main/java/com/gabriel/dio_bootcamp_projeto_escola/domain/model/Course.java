@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.util.List;
 @Data
 @AllArgsConstructor
@@ -17,7 +18,20 @@ public class Course {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(nullable = false)
-    private String nameCourse;
-    @OneToMany(fetch = FetchType.EAGER)
+    private String courseName;
+    @OneToMany()
+    private List<Discipline> disiplines;
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Student> studants;
+    private int periode;
+
+
+    @PrePersist
+    public void prePersist(){
+        setPeriode(LocalDate.now().getYear());
+    }
+
+    public void addStudent(Student student) {
+        this.studants.add(student);
+    }
 }
