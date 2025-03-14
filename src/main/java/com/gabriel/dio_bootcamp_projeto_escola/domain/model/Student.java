@@ -10,7 +10,6 @@ import java.util.List;
 
 @Data
 @AllArgsConstructor
-@NoArgsConstructor
 @Entity
 @Table(name = "tb_student")
 public class Student {
@@ -19,6 +18,13 @@ public class Student {
     private Long id;
     private String studentName;
     private String studentMail;
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private List<Discipline>disiplines;
+    private HashMap<String, Double> disciplineScore;
+
+    public Student() {
+        disciplineScore = new HashMap<>();
+    }
+
+    public void addScore(String discipline, Double score){
+        disciplineScore.put(discipline, score);
+    }
 }
