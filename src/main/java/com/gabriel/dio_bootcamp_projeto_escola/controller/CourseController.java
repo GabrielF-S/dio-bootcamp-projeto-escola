@@ -3,13 +3,15 @@ package com.gabriel.dio_bootcamp_projeto_escola.controller;
 import com.gabriel.dio_bootcamp_projeto_escola.domain.model.Course;
 import com.gabriel.dio_bootcamp_projeto_escola.domain.model.Discipline;
 import com.gabriel.dio_bootcamp_projeto_escola.service.CourseService;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.servers.Server;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
-
+@OpenAPIDefinition(servers = {@Server(url = "/", description = "Default server URL")})
 @RestController
 @RequestMapping("/course")
 public class CourseController {

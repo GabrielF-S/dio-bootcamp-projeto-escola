@@ -6,6 +6,8 @@ import com.gabriel.dio_bootcamp_projeto_escola.domain.model.Course;
 import com.gabriel.dio_bootcamp_projeto_escola.domain.model.School;
 import com.gabriel.dio_bootcamp_projeto_escola.domain.model.Student;
 import com.gabriel.dio_bootcamp_projeto_escola.service.SchoolService;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.servers.Server;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +15,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
 import java.util.Locale;
-
+@OpenAPIDefinition(servers = {@Server(url = "/", description = "Default server URL")})
 @RestController
 @RequestMapping(value = "/school")
 public class SchoolController {
