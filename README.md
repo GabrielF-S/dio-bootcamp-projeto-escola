@@ -8,8 +8,8 @@
 ![Railway](https://img.shields.io/badge/Railway-0B0D0E?style=for-the-badge&logo=Railway&logoColor=FFFFFF)
 ## Desafio
 No Lab do curso fomos introduzidos ao Deploy da aplicação na Nuvem utilizando o Railway como ferramenta de CI/CD e para 
-instacnciação da Base de Dados Postgres, na aula vimos o conceito de um usuario de um banco e seus dominios e fomos 
-desafiados a implmentar  um porjto de dominio nosso, desenvolvi uma proposta de Escola (Universidade) que possui seus 
+instanciação da Base de Dados Postgres, na aula vimos o conceito de um usuário de um banco e seus domínios e fomos 
+desafiados a implementar um projeto de domínio nosso, desenvolvi uma proposta de Escola (Universidade) que possui seus 
 cursos, os cursos tem sua grade e seus alunos.
 
 O código desenvolvido na aula vocês podem conferir [aqui](https://github.com/GabrielF-S/api-dio-bootcamp)
