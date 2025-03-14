@@ -19,7 +19,7 @@ public class Course {
     private Long id;
     @Column(nullable = false)
     private String courseName;
-    @OneToMany()
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Discipline> disiplines;
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Student> studants;
@@ -33,5 +33,8 @@ public class Course {
 
     public void addStudent(Student student) {
         this.studants.add(student);
+    }
+    public void addDiscipline(Discipline discipline) {
+        this.disiplines.add(discipline);
     }
 }
